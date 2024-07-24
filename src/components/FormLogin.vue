@@ -23,6 +23,8 @@ const elementForms = reactive({
   mostrarInformacoes: false,
 });
 
+const numero = 1;
+
 const mudarMsg = () => {
   elementForms.mostrarMensagem = !elementForms.mostrarMensagem;
 };
@@ -32,44 +34,43 @@ function validarFormulario() {
     alert("O nome deve ter entre 3 e 20 caracteres.");
     return false;
   }
-  if (elementForms.idade < 18) {
-    alert("A idade deve ser maior que 18 anos.");
-    return false;
-  }
-  if (!elementForms.email.includes("@")) {
-    alert("O e-mail deve ser válido.");
-    return false;
-  }
-  if (elementForms.senha !== elementForms.confirmarSenha) {
-    alert("As senhas não conferem.");
-    return false;
-  }
-  if (elementForms.endereco === "") {
-    alert("O endereço é obrigatório.");
-    return false;
-  }
-  if (elementForms.cidade === "") {
-    alert("A cidade é obrigatória.");
-    return false;
-  }
-  if (elementForms.estadoSelecionado === "") {
-    alert("Selecione um estado.");
-    return false;
-  }
-  if (elementForms.hobbie === "") {
-    alert("Adicione algum hobbie.");
-    return false;
-  }
-  if (elementForms.linguagens === "") {
-    alert("Linguagem preferida é obrigatória.");
-    return false;
-  }
-  if (elementForms.biografia === "") {
-    alert("Biografia é obrigatória.");
-    return false;
-  }
-  elementForms.mostrarInformacoes = true;
-  return true;
+  // if (elementForms.idade < 18) {
+  //   alert("A idade deve ser maior que 18 anos.");
+  //   return false;
+  // }
+  // if (!elementForms.email.includes("@")) {
+  //   alert("O e-mail deve ser válido.");
+  //   return false;
+  // }
+  // if (elementForms.senha !== elementForms.confirmarSenha) {
+  //   alert("As senhas não conferem.");
+  //   return false;
+  // }
+  // if (elementForms.endereco === "") {
+  //   alert("O endereço é obrigatório.");
+  //   return false;
+  // }
+  // if (elementForms.cidade === "") {
+  //   alert("A cidade é obrigatória.");
+  //   return false;
+  // }
+  // if (elementForms.estadoSelecionado === "") {
+  //   alert("Selecione um estado.");
+  //   return false;
+  // }
+  // if (elementForms.hobbie === "") {
+  //   alert("Adicione algum hobbie.");
+  //   return false;
+  // }
+  // if (elementForms.linguagens === "") {
+  //   alert("Linguagem preferida é obrigatória.");
+  //   return false;
+  // }
+  // if (elementForms.biografia === "") {
+  //   alert("Biografia é obrigatória.");
+  //   return false;
+  // }
+  emit("validarFormulario", elementForms)
 }
 </script>
 

@@ -1,11 +1,12 @@
 <script setup>
 import FormLoginVue from "./components/FormLogin.vue";
-
+import ResultFormVue from "./components/ResultForm.vue";
 </script>
 
 <template>
 <div class="body">
     <FormLoginVue/>
+    <ResultFormVue/>
 </div>
 </template>
 
