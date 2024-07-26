@@ -92,6 +92,8 @@ input {
 .resultados-content {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .resultados-content button {
   background-color: #ff0000;
@@ -124,6 +126,7 @@ input {
   font-weight: bold;
   height: 33vh;
   transition: all 1s ease-in-out;
+  text-align: center;
 }
 .resultados-content .resultado:hover {
   transition: all 1s ease-in-out;
